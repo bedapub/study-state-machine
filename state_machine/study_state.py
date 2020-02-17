@@ -125,7 +125,8 @@ class StudyImmunogenicityState(AbstractStudyState):
 class StudyProteomicsState(AbstractStudyState):
 
     def eval_next_state(self, **kwargs):
-        raise NotImplementedError
+        self.next_state = StudyProteomicsState
+        return "study_proteomics"
 
 
 class StudyRetroperspectiveInsertState(AbstractStudyState):
