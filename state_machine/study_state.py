@@ -65,7 +65,7 @@ class StudyStateMachine:
 
         study_state = {
             "generic_study": StudyGenericState,
-            "study_proteomics": StudyProteomicsState,
+            "rna_sequencing": StudyRNA_SeqState,
         }
 
         state_cls = study_state[name]
@@ -122,11 +122,11 @@ class StudyImmunogenicityState(AbstractStudyState):
     def eval_next_state(self, **kwargs):
         raise NotImplementedError
 
-class StudyProteomicsState(AbstractStudyState):
+class StudyRNA_SeqState(AbstractStudyState):
 
     def eval_next_state(self, **kwargs):
-        self.next_state = StudyProteomicsState
-        return "study_proteomics"
+        self.next_state = StudyRNA_SeqState
+        return "rna_sequencing"
 
 
 class StudyRetroperspectiveInsertState(AbstractStudyState):
