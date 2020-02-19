@@ -55,6 +55,7 @@ class StudyStateMachine:
             "generic_study": StudyGenericState,
             "immunogenicity": StudyImmunogenicityState,
             "retroperspective_insert": StudyRetroperspectiveInsertState,
+            "rna_sequencing_biokit": StudyRNA_SeqState
         }
 
         state_cls = study_states[name]
