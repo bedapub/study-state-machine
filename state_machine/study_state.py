@@ -54,7 +54,6 @@ class StudyStateMachine:
         study_states = {
             "generic_study": StudyGenericState,
             "immunogenicity": StudyImmunogenicityState,
-            "expression": StudyExpressionState,
             "retroperspective_insert": StudyRetroperspectiveInsertState,
         }
 
@@ -65,7 +64,7 @@ class StudyStateMachine:
 
         study_state = {
             "generic_study": StudyGenericState,
-            "rna_sequencing": StudyRNA_SeqState,
+            "rna_sequencing_biokit": StudyRNA_SeqState,
         }
 
         state_cls = study_state[name]
@@ -126,7 +125,7 @@ class StudyRNA_SeqState(AbstractStudyState):
 
     def eval_next_state(self, **kwargs):
         self.next_state = StudyRNA_SeqState
-        return "rna_sequencing"
+        return "rna_sequencing_biokit"
 
 
 class StudyRetroperspectiveInsertState(AbstractStudyState):
