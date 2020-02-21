@@ -6,7 +6,7 @@ developed as part of the metadata registration tool.
 Documentation
 -------------
 Sphinx documentation is available in `/docs`. Change into `/docs` and call :bash:`make html` to create the
-documentation. The documentation includes a getting started section.
+documentation.
 
 Purpose
 -------

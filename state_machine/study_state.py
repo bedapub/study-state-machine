@@ -94,12 +94,11 @@ class StudyGenericState(AbstractStudyState):
     def eval_next_state(self, **kwargs):
 
         if "platform" not in kwargs.keys():
-            raise AttributeError("Expected platform in submitted data")
+            raise AttributeError("Expect platform in submitted data")
 
         platform_name = kwargs["platform"]
 
         supported_platforms = {
-            "expression": StudyExpressionState,
             "immunogenicity": StudyImmunogenicityState
         }
 
