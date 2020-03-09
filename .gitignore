@@ -1,11 +1,16 @@
-# Project specific
-start_up.sh
-
 # Credentials
 .credentials.yaml
 
 .coverage
 
+# Compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# IDE
+.idea
 
 # Compiled / optimized files
 __pycharch__
@@ -21,6 +26,9 @@ instance/
 
 # snippets
 Flask-App/snippets/
+
+*.egg-info
+
 
 # Sphinx documentation
 docs/build/

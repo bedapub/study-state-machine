@@ -1,21 +1,20 @@
-"""Collection of state machine errors"""
+"""Collection of state machine related exceptions.
+
+All exceptions inherit from :class:`~state_machine.errors.StateMachineException`
+"""
 
 
-class GenericStateMachineException(Exception):
+class StateMachineException(Exception):
     """Generic state machine error"""
     pass
 
 
-class StatelessException(GenericStateMachineException):
-    """Exception if state is not defined"""
+class BehaviorNotAllowedException(StateMachineException):
+    """Exception if a state does not support a behavior"""
     pass
 
 
-class CurrentStateNotDefined(GenericStateMachineException):
-    """Exception if current """
+class StateNotFoundException(StateMachineException):
+    """Exception if state is not found by its name"""
     pass
 
-
-class NextStateNotDefined(GenericStateMachineException):
-    """Error if no next state is defined"""
-    pass
