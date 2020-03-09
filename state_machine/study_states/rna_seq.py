@@ -10,6 +10,6 @@ class RNASeqState(IStudyState):
 class BiokitUploadState(IStudyState):
     """State for studies which are registered with the Biokit"""
 
-    def create_study(self):
+    def create_study(self, *args, **kwargs):
         self.context.transition_to(RNASeqState())
 
