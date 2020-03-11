@@ -1,7 +1,7 @@
 import abc
 
-from state_machine.context import Context
-from state_machine.errors import BehaviorNotAllowedException
+from study_state_machine.context import Context
+from study_state_machine.errors import BehaviorNotAllowedException
 
 
 class IState(abc.ABC):

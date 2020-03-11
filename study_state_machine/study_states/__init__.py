@@ -1,7 +1,7 @@
 import sys
 import inspect
 
-from state_machine.study_states.rna_seq import RNASeqState, BiokitUploadState
+from study_state_machine.study_states.rna_seq import RNASeqState, BiokitUploadState
 
 """
 Store all above imported states in dict <name, class>

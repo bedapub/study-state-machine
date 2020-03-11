@@ -1,9 +1,9 @@
 import unittest
 
-from state_machine.interfaces import IStudyState
-from state_machine.errors import StateNotFoundException, BehaviorNotAllowedException
-from state_machine.study_states import RNASeqState, BiokitUploadState
-from state_machine.context import Context
+from study_state_machine.interfaces import IStudyState
+from study_state_machine.errors import StateNotFoundException, BehaviorNotAllowedException
+from study_state_machine.study_states import RNASeqState, BiokitUploadState
+from study_state_machine.context import Context
 
 
 class ContextTestCase(unittest.TestCase):

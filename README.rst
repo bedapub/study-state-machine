@@ -5,8 +5,17 @@ developed as part of the metadata registration tool.
 
 Documentation
 -------------
-Sphinx documentation is available in `/docs`. Change into `/docs` and call :bash:`make html` to create the
-documentation.
+Please find the documentation on `Read the Docs`_.
+
+.. _Read the docs: https://study-state-machine.readthedocs.io/en/stable
+
+
+Installation
+------------
+
+.. code-block:: console
+
+    pip install study-state-machine
 
 Purpose
 -------
@@ -16,5 +25,5 @@ prototype.
 
 Authors
 -------
-* **Rafael Müller** <mailto:rafael.mueller1@gmail.com> - Initial work
+* **Rafael Müller** <mailto:rafa.molitoris@gmail.com> - Initial work
 * **Laura Badi** - Supervisor

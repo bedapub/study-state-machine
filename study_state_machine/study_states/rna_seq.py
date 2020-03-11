@@ -1,4 +1,4 @@
-from state_machine.interfaces import IStudyState
+from study_state_machine.interfaces import IStudyState
 
 
 class RNASeqState(IStudyState):

@@ -1,7 +1,7 @@
-state_machine
-=============
+study_state_machine
+===================
 
 .. toctree::
    :maxdepth: 4
 
-   state_machine
+   study_state_machine

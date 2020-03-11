@@ -10,8 +10,8 @@ Welcome to StateMachine's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
-   modules
+   introduction
+   modules/modules
 
 
 
