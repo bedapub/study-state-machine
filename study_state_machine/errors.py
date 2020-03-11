@@ -1,6 +1,6 @@
 """Collection of state machine related exceptions.
 
-All exceptions inherit from :class:`~state_machine.errors.StateMachineException`
+All exceptions inherit from :class:`~study_state_machine.errors.StateMachineException`
 """
 
 

@@ -1,7 +1,7 @@
 """Implementation of a finite state machine for studies"""
 import logging
 
-from state_machine.errors import StateNotFoundException
+from study_state_machine.errors import StateNotFoundException
 
 logger = logging.getLogger(__name__)
 
@@ -9,8 +9,8 @@ logger = logging.getLogger(__name__)
 class Context:
     """
     Only if an initial state is passed to the constructor, the context of the current state is set. Otherwise, call
-    :func:`~state_machine.context.Context.transition_to` or
-    :func:`~state_machine.context.Context.load_state` with a State or a name of a State, respectively,
+    :func:`~study_state_machine.context.Context.transition_to` or
+    :func:`~study_state_machine.context.Context.load_state` with a State or a name of a State, respectively,
     before delegating behavior.
     """
 
@@ -21,7 +21,7 @@ class Context:
             self._current_state.context = self
 
         # Prevent circular import
-        from state_machine.study_states import available_states
+        from study_state_machine.study_states import available_states
         self._available_states = available_states
 
     def __repr__(self):
