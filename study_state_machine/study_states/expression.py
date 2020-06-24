@@ -6,7 +6,8 @@ class ExpressionRegisteredState(IStudyState):
     """An expression study has just been registered"""
 
     def create_study(self, *args, **kwargs):
-        pass
+        if kwargs.get("datasets", []) != []:
+            self.context.transition_to(ExpressionDatasetState())
 
     def change_state(self, *args, **kwargs):
         if kwargs.get("datasets", []) != []:
