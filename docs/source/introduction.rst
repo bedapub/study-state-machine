@@ -18,7 +18,7 @@ The following example shows how to create a context and load a state by its name
     from state_machine.context import Context
 
     context = Context()
-    context.load_state("BiokitUploadState")
+    context.load_state("RegisteredState")
     context.change_state()
 
 State
