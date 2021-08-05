@@ -23,22 +23,26 @@ The following example shows how to create a context and load a state by its name
 
 State
 =====
-Each state is modeled as a class and implements a set of behaviors. All states inherit from the abstract
-:class:`~state_machine.interfaces.IState`.
+Each state is modeled as a JSON document with two set of strategies (create_study and change_state) that dictates a set of behaviors.
 
-A list with all existing states can be obtained as follows:
+The existing states need to be passed to the context. Here is an example:
 
-.. code-block:: python
+.. code-block:: json
 
-    from state_machine.context import Context
-
-    context = Context()
-    name, cls = context.available_states
-
-Study States
-============
-A Study state must be inherited from :class:`~state_machine.interfaces.IStudyState` instead of IState. All study states
-are implemented in the package :py:mod:`~state_machine.study_states`.
-
-**Note**: The name of a state is derived from its class name (see :py:mod:`state_machine.study_states.__init__`).
-Therefore, it can lead to an exception if the class name of a state is changed.
+    {
+        "name" : "RegisteredState",
+        "strategies_create_study" : [ 
+            {
+                "name" : "expression",
+                "value" : "len(kwargs.get('datasets', [])) > 0",
+                "state_if_true" : "DatasetState"
+            }
+        ],
+        "strategies_change_state" : [ 
+            {
+                "name" : "expression",
+                "value" : "len(kwargs.get('datasets', [])) > 0",
+                "state_if_true" : "DatasetState"
+            }
+        ]
+    }
