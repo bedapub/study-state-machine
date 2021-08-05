@@ -34,14 +34,7 @@ class Context:
                     "value": "len(kwargs.get('datasets', [])) > 0",
                     "state_if_true": "DatasetState"
                 }
-            ],
-            "ui_actions" : {
-                "study" : ["view_study", "view_diagram", "edit_study", "delete_study"],
-                "dataset" : ["choose_form_dataset"],
-                "pe" : [],
-                "sample" : ["add_edit_samples"],
-                "readout" : []
-            }
+            ]
         }
         """
         self._current_state = initial_state
