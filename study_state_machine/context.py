@@ -82,7 +82,6 @@ class Context:
 
     def parse_strategies(self, strategies, *args, **kwargs):
         """ Parse strategies list and return a state to be transitioned to """
-        print(kwargs)
         for strategy in strategies:
             if strategy["name"] == "expression":
                 expression_value = eval(strategy["value"])
